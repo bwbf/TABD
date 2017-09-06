@@ -8,29 +8,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webservice.model.User;
+import com.webservice.model.Gari;
 import com.webservice.repositorio.UserRepositorio;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/gari")
 public class UserController {
 	
 	@Autowired
     UserRepositorio userRepository;
 
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void create(@RequestBody User user) {
-        userRepository.save(user);
+    public void create(@RequestBody Gari gari) {
+        userRepository.save(gari);
     }
 
     @RequestMapping(value = "/{id}") 
-    public User read(@PathVariable String id) {
+    public Gari read(@PathVariable String id) {
         return userRepository.findOne(id);
     }
 
     @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void update(@RequestBody User user) {
-        userRepository.save(user);
+    public void update(@RequestBody Gari gari) {
+        userRepository.save(gari);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE) 

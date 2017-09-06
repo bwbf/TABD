@@ -3,12 +3,12 @@ package com.webservice.model;
 import org.springframework.data.annotation.Id;
 
 
-public class User {
+public class Gari {
     @Id
     private String id;
     private String name;
     private int age;
-    private String email;
+    private String funcao;
 
     public String getId() {
         return id;
@@ -34,12 +34,12 @@ public class User {
         this.age = age;
     }
 
-    public String getEmail() {
-        return email;
+    public String getFuncao() {
+        return funcao;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setFuncao(String email) {
+        this.funcao = email;
     }
 
 }
