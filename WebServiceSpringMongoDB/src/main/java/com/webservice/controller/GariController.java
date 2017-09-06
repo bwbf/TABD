@@ -13,7 +13,7 @@ import com.webservice.repositorio.UserRepositorio;
 
 @RestController
 @RequestMapping("/gari")
-public class UserController {
+public class GariController {
 	
 	@Autowired
     UserRepositorio userRepository;
